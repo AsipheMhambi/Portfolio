@@ -34,14 +34,6 @@ scrollBtn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
 
-const response = await fetch(form.action, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(Object.fromEntries(formData)),
-});
-
 //javascript for reveal website elements on scroll
 window.addEventListener("scroll", reveal);
 
