@@ -1,10 +1,24 @@
-module.exports = async (req, res) => {
-  const { name, email, message } = req.body;
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
 
-  // Perform any necessary processing (e.g., send email, save to a database)
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-  // For demonstration purposes, log the form data
-  console.log('Form Data:', { name, email, message });
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    });
 
-  return res.status(200).json({ message: 'Form submitted successfully!' });
-};
+    if (response.ok) {
+      console.log('Form submitted successfully!');
+      // You can add further actions here, such as displaying a success message to the user.
+    } else {
+      console.error('Error submitting form:', response.statusText);
+      // Handle the error, such as displaying an error message to the user.
+    }
+  });
+});
