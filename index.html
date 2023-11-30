@@ -48,7 +48,7 @@
       <div class="content">
         <div class="column col-left reveal">
           <div class="img-card">
-            <img src="ace.jpg" alt="">
+            <img src="images/ace.jpg" alt="">
           </div>
         </div>
         <div class="column col-right reveal">
@@ -192,20 +192,20 @@
         <div class="row">
           <div class="contact-form reveal">
               <h3>Send Message</h3>
-              <form method="post">
-                  <div class="input-box">
-                      <input type="text" name="name" placeholder="Name">
-                  </div>
-                  <div class="input-box">
-                      <input type="text" name="email" placeholder="Email">
-                  </div>
-                  <div class="input-box">
-                      <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
-                  </div>
-                  <div class="input-box">
-                      <input type="submit" class="send-btn" value="Send">
-                  </div>
-              </form>
+              <form id="contactForm">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="input-box">
+                    <input type="text" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="send-btn" value="Send">
+                </div>
+            </form>
           </div>
       </div>
       </div>
@@ -217,6 +217,8 @@
     </footer>
 
     <script src="script.js" charset="utf-8"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   </body>
 </html>
