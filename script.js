@@ -50,13 +50,7 @@ function reveal(){
     }
   }
 }
-function handleClick(event) {
-  // Prevent the default action of the anchor tag
-  event.preventDefault();
-
-  // Get the href attribute value
-  var href = event.target.parentElement.getAttribute("href");
-
-  // Redirect to the specified URL
-  window.location.href = href;
+function toggleMenu() {
+  var expandedMenu = document.querySelector('.expanded-menu');
+  expandedMenu.style.display = (expandedMenu.style.display === 'block') ? 'none' : 'block';
 }
